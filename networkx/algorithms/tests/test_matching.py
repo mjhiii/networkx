@@ -450,7 +450,7 @@ class TestIsMatching:
         assert not nx.is_matching(G, {(0, 0), (1, 2), (2, 3)})
         # selfloop edge in G
         G.add_edge(0, 0)
-        assert not nx.is_matching(G, {(0, 0), (1, 2), (2, 3)})
+        assert not nx.is_matching(G, {(0, 0), (1, 2)})
 
     def test_invalid_matching(self):
         G = nx.path_graph(4)
